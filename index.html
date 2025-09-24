@@ -24,7 +24,16 @@
         <a href="#about">About</a>
         <a href="#contact" class="btn-ghost">Contact</a>
       </nav>
+      <!-- Mobil Menü Butonu -->
+      <button class="menu-toggle" aria-label="Menüyü Aç/Kapat">☰</button>
     </div>
+    <!-- Mobil Menü -->
+    <nav class="menu-mobile">
+      <a href="#shop">Shop</a>
+      <a href="#collections">Collections</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <main>
@@ -152,6 +161,13 @@
         header.style.background = "transparent";
         header.style.borderBottom = "none";
       }
+    });
+
+    // Mobil menü aç/kapat
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.menu-mobile');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
     });
   </script>
 </body>
