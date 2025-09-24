@@ -45,31 +45,24 @@ body{
 }
 .btn-ghost:hover{ border-color:rgba(255,255,255,.18); }
 
-/* Mobil Menü Toggle */
+/* Hamburger (mobil) */
 .menu-toggle {
   display: none;
-  font-size: 22px;
-  cursor: pointer;
-  color: var(--platinum);
-}
-.menu-mobile {
-  display: none;
   flex-direction: column;
-  background: var(--card);
-  position: absolute;
-  top: 60px; right: 20px;
-  border-radius: 8px;
-  overflow: hidden;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;   /* baloncuk yok */
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
-.menu-mobile a {
-  padding: 12px 18px;
-  color: var(--muted);
-  text-decoration: none;
-  border-bottom: 1px solid var(--line);
-}
-.menu-mobile a:hover {
-  background: #16181d;
-  color: var(--text);
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: var(--platinum);
+  border-radius: 2px;
 }
 
 /* Hero */
@@ -143,15 +136,10 @@ body{
 
 /* Responsive */
 @media (max-width: 980px){ .categories{ grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 768px){
-  .menu { display:none; }
-  .menu-toggle { display:block; }
-  .menu-mobile { display:none; }
-}
-@media (min-width: 769px){
-  .menu { display:flex; }
-  .menu-toggle { display:none; }
-  .menu-mobile { display:none !important; }
+@media (max-width: 768px){ 
+  .menu{ display:none; } 
+  .categories{ grid-template-columns: 1fr; }
+  .menu-toggle{ display:flex; }
 }
 
 /* Social Links */
@@ -162,7 +150,7 @@ body{
 }
 .social-links img{
   width:20px; height:20px;
-  filter:invert(80%);
+  filter:invert(80%);  /* ikonları beyaz/gümüş yapar */
   transition: filter .3s ease;
 }
 .social-links img:hover{
