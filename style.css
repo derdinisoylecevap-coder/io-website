@@ -51,7 +51,7 @@ body{
   position:absolute; inset:0;
   background:
     linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.7)),
-    url("assets/hero.jpg") no-repeat center top;
+    url("./assets/hero.jpg") no-repeat center top;
   background-size:cover;
   filter:saturate(.9) contrast(1.05);
 }
@@ -132,3 +132,4 @@ body{
 .social-links img:hover{
   filter:invert(100%) brightness(1.3);
 }
+
