@@ -24,12 +24,13 @@
         <a href="#about">About</a>
         <a href="#contact" class="btn-ghost">Contact</a>
       </nav>
-      <!-- Mobil Hamburger -->
-      <button class="menu-toggle" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="menu-toggle" id="menuToggle">☰</div>
+    </div>
+    <div class="menu-mobile" id="menuMobile">
+      <a href="#shop">Shop</a>
+      <a href="#collections">Collections</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </div>
   </header>
 
@@ -160,11 +161,11 @@
       }
     });
 
-    // Mobil menü aç/kapat
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu');
-    menuToggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
+    // Mobile Menu Toggle
+    const toggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("menuMobile");
+    toggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("open");
     });
   </script>
 </body>
